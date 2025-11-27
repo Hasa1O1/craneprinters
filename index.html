@@ -520,6 +520,7 @@
             const next = sliderEl.querySelector('.slider-btn.next');
             const slides = track ? Array.from(track.children) : [];
             let index = 0;
+            let startX = null;
 
             function update() {
                 if (!track || !windowEl || !slides.length) return;
@@ -546,6 +547,27 @@
                 prev.addEventListener('click', () => move(-1));
                 next.addEventListener('click', () => move(1));
                 window.addEventListener('resize', update);
+
+                // Swipe support
+                function start(e) {
+                    startX = e.touches ? e.touches[0].clientX : e.clientX;
+                }
+
+                function end(e) {
+                    if (startX === null) return;
+                    const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+                    const delta = endX - startX;
+                    if (Math.abs(delta) > 40) {
+                        move(delta < 0 ? 1 : -1);
+                    }
+                    startX = null;
+                }
+
+                windowEl.addEventListener('touchstart', start, { passive: true });
+                windowEl.addEventListener('touchend', end);
+                windowEl.addEventListener('mousedown', start);
+                windowEl.addEventListener('mouseup', end);
+                windowEl.addEventListener('mouseleave', end);
                 update();
             }
         }
