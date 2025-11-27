@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crane Printers - Professional Embroidery Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> 
-    <style>
-       
-    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="container">
+    <nav class="nav">
+        <div class="container nav__inner">
             <a href="#home" class="logo">Crane Printers</a>
-            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+            <button class="mobile-menu" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <span class="mobile-menu__icon"></span>
+                <span class="mobile-menu__label">Menu</span>
+            </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -22,21 +25,50 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a class="nav-cta" href="#contact">Get a quote</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container">
-            <h1>Premium Embroidery & Printing Services</h1>
-            <p>Transforming your designs into beautiful reality with precision and care</p>
-            <a href="#contact" class="cta-button">Get a Quote</a>
+        <div class="container hero__grid">
+            <div class="hero__copy">
+                <p class="eyebrow">Lusaka embroidery & print studio</p>
+                <h1>Premium branding that holds up to real use.</h1>
+                <p class="hero__lede">Transforming your designs into crisp embroidery, bold banners, and durable merchandise with precision and care.</p>
+                <div class="hero__actions">
+                    <a href="#contact" class="cta-button">Get a quote</a>
+                    <button class="ghost-button" type="button" onclick="openModal()">Client login</button>
+                </div>
+                <div class="hero__chips">
+                    <span class="chip">Industrial-grade stitching</span>
+                    <span class="chip">Color-true prints</span>
+                    <span class="chip">Priority scheduling available</span>
+                </div>
+            </div>
+            <div class="hero__media">
+                <div class="hero__card">
+                    <p class="hero__card-title">Full-service branding</p>
+                    <p class="hero__card-text">Embroidery, banners, vehicle wraps, and promotional kits handled under one roof by a focused team.</p>
+                    <div class="hero__badge">
+                        <span class="hero__badge-dot"></span>
+                        <div>
+                            <p class="hero__badge-title">Lusaka-based team</p>
+                            <p class="hero__badge-sub">Serving businesses across Zambia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__floating">
+                    <p class="hero__floating-label">Fast responses</p>
+                    <p class="hero__floating-value">Quotes and proofs without the wait.</p>
+                </div>
+            </div>
         </div>
     </section>
 
       <!-- Logo picture section  -->
     <section class="logo picture" >
-        <div class=" logo picture container">
+        <div class="logo picture container">
             <img class="logo-image" src="images/crane printers logo.png" alt="crane printers logo">
         </div>
     </section>
@@ -44,7 +76,11 @@
     <!-- Services Section -->
     <section id="services" class="services-slider">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <div class="section-header">
+                <p class="eyebrow">What we deliver</p>
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Embroidery, wide-format printing, and branded merchandise built to match your timeline and standards.</p>
+            </div>
             <div class="slider">
                 <button class="slider-btn prev" aria-label="Previous services slide">&#8249;</button>
                 <div class="slider-window">
@@ -178,7 +214,11 @@
 
     <section id="work-slider" class="work-slider">
         <div class="container">
-            <h2 class="section-title">Our Work</h2>
+            <div class="section-header">
+                <p class="eyebrow">Production highlights</p>
+                <h2 class="section-title">Our Work</h2>
+                <p class="section-subtitle">Recent embroidery, signage, and branding projects crafted for teams, events, and campaigns.</p>
+            </div>
             <div class="slider">
                 <button class="slider-btn prev" aria-label="Previous slide">&#8249;</button>
                 <div class="slider-window">
@@ -247,37 +287,58 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Crane Printers</h2>
+            <div class="section-header">
+                <p class="eyebrow">Why Crane Printers</p>
+                <h2 class="section-title">About Crane Printers</h2>
+                <p class="section-subtitle">We treat every garment, banner, and badge like a flagship piece, matching colors, textures, and finishes to your brief.</p>
+            </div>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Professional Embroidery Specialists</h3>
                     <p>Crane Printers is your trusted partner for high-quality embroidery and printing services in Lusaka. We specialize in transforming ordinary garments and materials into custom-branded masterpieces.</p>
                     <p>With years of experience and state-of-the-art equipment, we deliver exceptional results for businesses, organizations, and individuals. From corporate uniforms to promotional items, we handle projects of all sizes with precision and care.</p>
                     <p>Our commitment to quality, attention to detail, and customer satisfaction sets us apart in the industry.</p>
+                    <div class="about-pills">
+                        <span class="pill">Color-checked threads</span>
+                        <span class="pill">Durable finishing</span>
+                        <span class="pill">Local support</span>
+                    </div>
                 </div>
                 <div class="contact-info">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Contact Information</h3>
+                    <h3 class="contact-info__title">Contact Information</h3>
                     <div class="contact-item">
-                        <span class="contact-icon">📍</span>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="presentation">
+                                <path d="M12 2.5c-3.14 0-5.5 2.4-5.5 5.45 0 4.27 5.5 10.55 5.5 10.55s5.5-6.28 5.5-10.55C17.5 4.9 15.14 2.5 12 2.5Zm0 7.75a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6Z" fill="currentColor"/>
+                            </svg>
+                        </span>
                         <div>
-                            <strong>Location:</strong><br>
+                            <strong>Location</strong><br>
                             Nationalist Plaza, Room 1<br>
                             Nationalist Road, Libala-Lusaka
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">📞</span>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="presentation">
+                                <path d="M7.2 3.5h2.5c.25 0 .47.15.57.38l1 2.42a.65.65 0 0 1-.16.72l-1.5 1.33a9.6 9.6 0 0 0 4.05 4.05l1.33-1.5a.65.65 0 0 1 .72-.16l2.42 1c.23.1.38.32.38.57v2.5c0 .36-.28.66-.64.7a12.8 12.8 0 0 1-11.4-11.4.68.68 0 0 1 .68-.74Z" fill="currentColor"/>
+                            </svg>
+                        </span>
                         <div>
-                            <strong>Phone:</strong><br>
+                            <strong>Phone</strong><br>
                             +260 965 937 663
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">✉️</span>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="presentation">
+                                <path d="M4 5.75A1.75 1.75 0 0 1 5.75 4h12.5A1.75 1.75 0 0 1 20 5.75v12.5A1.75 1.75 0 0 1 18.25 20H5.75A1.75 1.75 0 0 1 4 18.25Zm2-.25a.5.5 0 0 0-.5.5v.26l6 4.13 6-4.14V6a.5.5 0 0 0-.5-.5Z" fill="currentColor"/>
+                            </svg>
+                        </span>
                         <div>
-                            <strong>Email:</strong><br>
+                            <strong>Email</strong><br>
                             craneprinters02@gmail.com
                         </div>
                     </div>
@@ -289,7 +350,11 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-header">
+                <p class="eyebrow">Let's start your brief</p>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Share your project details and we'll respond with timelines, pricing, and print-ready guidance.</p>
+            </div>
             <form class="contact-form" onsubmit="handleSubmit(event)">
                 <div class="form-group">
                     <label>Full Name *</label>
@@ -327,8 +392,8 @@
     <!-- Login Modal -->
     <div class="modal" id="loginModal">
         <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()">×</button>
-            <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Login</h2>
+            <button class="close-modal" aria-label="Close modal" onclick="closeModal()">&times;</button>
+            <h2 class="modal-title">Login</h2>
             <form onsubmit="handleLogin(event)">
                 <div class="form-group">
                     <label>Email</label>
@@ -361,7 +426,12 @@
 
     <script>
         function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
+            const navLinks = document.getElementById('navLinks');
+            const button = document.querySelector('.mobile-menu');
+            const isOpen = navLinks.classList.toggle('active');
+            if (button) {
+                button.setAttribute('aria-expanded', isOpen);
+            }
         }
 
         function openModal() {
@@ -399,10 +469,22 @@
                     const target = document.querySelector(href);
                     if (target) {
                         target.scrollIntoView({ behavior: 'smooth' });
-                        document.getElementById('navLinks').classList.remove('active');
+                        const navLinks = document.getElementById('navLinks');
+                        const button = document.querySelector('.mobile-menu');
+                        if (navLinks) navLinks.classList.remove('active');
+                        if (button) button.setAttribute('aria-expanded', 'false');
                     }
                 }
             });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 960) {
+                const navLinks = document.getElementById('navLinks');
+                const button = document.querySelector('.mobile-menu');
+                if (navLinks) navLinks.classList.remove('active');
+                if (button) button.setAttribute('aria-expanded', 'false');
+            }
         });
 
         // Sliders (services + work)
@@ -454,3 +536,6 @@
     </script>
 </body>
 </html>
+
+
+
