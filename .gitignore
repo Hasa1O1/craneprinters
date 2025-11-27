@@ -1,0 +1,10 @@
+﻿AppData/
+Contacts/
+Downloads/
+Music/
+Videos/
+OneDrive/
+*.exe
+*.log
+NTUSER.*
+ntuser.*
