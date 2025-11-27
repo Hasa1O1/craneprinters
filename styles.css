@@ -753,11 +753,11 @@ footer a {
 
     .slider-window {
         margin: 0;
-        padding: 0 0.25rem;
+        padding: 0;
     }
 
     .slider-track {
-        gap: 0.65rem;
+        gap: 0.5rem;
         padding: 0.25rem 0.25rem 0.75rem;
     }
 
@@ -766,8 +766,8 @@ footer a {
     }
 
     .work-card {
-        flex: 0 0 88vw;
-        width: 88vw;
+        flex: 0 0 92vw;
+        width: 92vw;
     }
 
     .contact-info {
