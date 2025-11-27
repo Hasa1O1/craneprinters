@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crane Printers - Professional Embroidery Services</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> 
+    <style>
+       
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav">
-        <div class="container nav__inner">
+    <nav>
+        <div class="container">
             <a href="#home" class="logo">Crane Printers</a>
-            <button class="mobile-menu" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation" onclick="toggleMenu()">
-                <span class="mobile-menu__icon"></span>
-                <span class="mobile-menu__label">Menu</span>
-            </button>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -25,50 +22,21 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a class="nav-cta" href="#contact">Get a quote</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container hero__grid">
-            <div class="hero__copy">
-                <p class="eyebrow">Lusaka embroidery & print studio</p>
-                <h1>Premium branding that holds up to real use.</h1>
-                <p class="hero__lede">Transforming your designs into crisp embroidery, bold banners, and durable merchandise with precision and care.</p>
-                <div class="hero__actions">
-                    <a href="#contact" class="cta-button">Get a quote</a>
-                    <button class="ghost-button" type="button" onclick="openModal()">Client login</button>
-                </div>
-                <div class="hero__chips">
-                    <span class="chip">Industrial-grade stitching</span>
-                    <span class="chip">Color-true prints</span>
-                    <span class="chip">Priority scheduling available</span>
-                </div>
-            </div>
-            <div class="hero__media">
-                <div class="hero__card">
-                    <p class="hero__card-title">Full-service branding</p>
-                    <p class="hero__card-text">Embroidery, banners, vehicle wraps, and promotional kits handled under one roof by a focused team.</p>
-                    <div class="hero__badge">
-                        <span class="hero__badge-dot"></span>
-                        <div>
-                            <p class="hero__badge-title">Lusaka-based team</p>
-                            <p class="hero__badge-sub">Serving businesses across Zambia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero__floating">
-                    <p class="hero__floating-label">Fast responses</p>
-                    <p class="hero__floating-value">Quotes and proofs without the wait.</p>
-                </div>
-            </div>
+        <div class="container">
+            <h1>Premium Embroidery & Printing Services</h1>
+            <p>Transforming your designs into beautiful reality with precision and care</p>
+            <a href="#contact" class="cta-button">Get a Quote</a>
         </div>
     </section>
 
       <!-- Logo picture section  -->
     <section class="logo picture" >
-        <div class="logo picture container">
+        <div class=" logo picture container">
             <img class="logo-image" src="images/crane printers logo.png" alt="crane printers logo">
         </div>
     </section>
@@ -76,11 +44,7 @@
     <!-- Services Section -->
     <section id="services" class="services-slider">
         <div class="container">
-            <div class="section-header">
-                <p class="eyebrow">What we deliver</p>
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Embroidery, wide-format printing, and branded merchandise built to match your timeline and standards.</p>
-            </div>
+            <h2 class="section-title">Our Services</h2>
             <div class="slider">
                 <button class="slider-btn prev" aria-label="Previous services slide">&#8249;</button>
                 <div class="slider-window">
@@ -170,7 +134,7 @@
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Publishing</p>
                                 <h3>Magazines</h3>
-                                <p>Staple-bound or perfect-bound issues, color-accurate.</p>
+                                 <p>Staple-bound or perfect-bound issues, color-accurate.</p>
                             </div>
                         </article>
                         <article class="work-card">
@@ -214,16 +178,12 @@
 
     <section id="work-slider" class="work-slider">
         <div class="container">
-            <div class="section-header">
-                <p class="eyebrow">Production highlights</p>
-                <h2 class="section-title">Our Work</h2>
-                <p class="section-subtitle">Recent embroidery, signage, and branding projects crafted for teams, events, and campaigns.</p>
-            </div>
+            <h2 class="section-title">Our Work</h2>
             <div class="slider">
                 <button class="slider-btn prev" aria-label="Previous slide">&#8249;</button>
                 <div class="slider-window">
                     <div class="slider-track">
-                        <article class="work-card" style="background-image: url('images/our works 1.jpg');">
+                        <article class="work-card" style="background-image: image-set(url('images/our services 1.webp') type('image/webp'), url('images/our services 1.jpg') type('image/jpeg'), url('images/our services 1.png') type('image/png'), url('images/our works 1.webp') type('image/webp'), url('images/our works 1.jpg') type('image/jpeg'), url('images/our works 1.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Branding</p>
@@ -231,7 +191,7 @@
                                 <p>Professional, consistent branding for teams.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: image-set(url('images/our works 2.webp') type('image/webp'), url('images/our works 2.jpg') type('image/jpeg'));">
+                        <article class="work-card" style="background-image: image-set(url('images/our services 2.webp') type('image/webp'), url('images/our services 2.jpg') type('image/jpeg'), url('images/our services 2.png') type('image/png'), url('images/our works 2.webp') type('image/webp'), url('images/our works 2.jpg') type('image/jpeg'), url('images/our works 2.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Headwear</p>
@@ -239,7 +199,7 @@
                                 <p>Sharp stitching and color-true logos.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: url('images/our works 3.jpg');">
+                        <article class="work-card" style="background-image: image-set(url('images/our services 3.webp') type('image/webp'), url('images/our services 3.jpg') type('image/jpeg'), url('images/our services 3.png') type('image/png'), url('images/our works 3.webp') type('image/webp'), url('images/our works 3.jpg') type('image/jpeg'), url('images/our works 3.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Bags</p>
@@ -247,7 +207,7 @@
                                 <p>Durable finishes for daily use.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: url('images/our works 4.jpg');">
+                        <article class="work-card" style="background-image: image-set(url('images/our services 4.webp') type('image/webp'), url('images/our services 4.jpg') type('image/jpeg'), url('images/our services 4.png') type('image/png'), url('images/our works 4.webp') type('image/webp'), url('images/our works 4.jpg') type('image/jpeg'), url('images/our works 4.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Events</p>
@@ -255,7 +215,7 @@
                                 <p>Eye-catching gear for launches and expos.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: url('images/our works 5.jpg');">
+                        <article class="work-card" style="background-image: image-set(url('images/our services 5.webp') type('image/webp'), url('images/our services 5.jpg') type('image/jpeg'), url('images/our services 5.png') type('image/png'), url('images/our works 5.webp') type('image/webp'), url('images/our works 5.jpg') type('image/jpeg'), url('images/our works 5.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Schools</p>
@@ -263,7 +223,7 @@
                                 <p>Precise embroidery that holds up to wear.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: url('images/our works 6.jpg');">
+                        <article class="work-card" style="background-image: image-set(url('images/our services 6.webp') type('image/webp'), url('images/our services 6.jpg') type('image/jpeg'), url('images/our services 6.png') type('image/png'), url('images/our works 6.webp') type('image/webp'), url('images/our works 6.jpg') type('image/jpeg'), url('images/our works 6.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Sports</p>
@@ -271,7 +231,7 @@
                                 <p>Performance-ready prints and stitching.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: image-set(url('images/our works 7.webp') type('image/webp'), url('images/our works 7.jpg') type('image/jpeg'));">
+                        <article class="work-card" style="background-image: image-set(url('images/our services 7.webp') type('image/webp'), url('images/our services 7.jpg') type('image/jpeg'), url('images/our services 7.png') type('image/png'), url('images/our works 7.webp') type('image/webp'), url('images/our works 7.jpg') type('image/jpeg'), url('images/our works 7.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Print</p>
@@ -287,58 +247,37 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about">
         <div class="container">
-            <div class="section-header">
-                <p class="eyebrow">Why Crane Printers</p>
-                <h2 class="section-title">About Crane Printers</h2>
-                <p class="section-subtitle">We treat every garment, banner, and badge like a flagship piece, matching colors, textures, and finishes to your brief.</p>
-            </div>
+            <h2 class="section-title">About Crane Printers</h2>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Professional Embroidery Specialists</h3>
                     <p>Crane Printers is your trusted partner for high-quality embroidery and printing services in Lusaka. We specialize in transforming ordinary garments and materials into custom-branded masterpieces.</p>
                     <p>With years of experience and state-of-the-art equipment, we deliver exceptional results for businesses, organizations, and individuals. From corporate uniforms to promotional items, we handle projects of all sizes with precision and care.</p>
                     <p>Our commitment to quality, attention to detail, and customer satisfaction sets us apart in the industry.</p>
-                    <div class="about-pills">
-                        <span class="pill">Color-checked threads</span>
-                        <span class="pill">Durable finishing</span>
-                        <span class="pill">Local support</span>
-                    </div>
                 </div>
                 <div class="contact-info">
-                    <h3 class="contact-info__title">Contact Information</h3>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Contact Information</h3>
                     <div class="contact-item">
-                        <span class="contact-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" role="presentation">
-                                <path d="M12 2.5c-3.14 0-5.5 2.4-5.5 5.45 0 4.27 5.5 10.55 5.5 10.55s5.5-6.28 5.5-10.55C17.5 4.9 15.14 2.5 12 2.5Zm0 7.75a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6Z" fill="currentColor"/>
-                            </svg>
-                        </span>
+                        <span class="contact-icon">📍</span>
                         <div>
-                            <strong>Location</strong><br>
+                            <strong>Location:</strong><br>
                             Nationalist Plaza, Room 1<br>
                             Nationalist Road, Libala-Lusaka
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" role="presentation">
-                                <path d="M7.2 3.5h2.5c.25 0 .47.15.57.38l1 2.42a.65.65 0 0 1-.16.72l-1.5 1.33a9.6 9.6 0 0 0 4.05 4.05l1.33-1.5a.65.65 0 0 1 .72-.16l2.42 1c.23.1.38.32.38.57v2.5c0 .36-.28.66-.64.7a12.8 12.8 0 0 1-11.4-11.4.68.68 0 0 1 .68-.74Z" fill="currentColor"/>
-                            </svg>
-                        </span>
+                        <span class="contact-icon">📞</span>
                         <div>
-                            <strong>Phone</strong><br>
+                            <strong>Phone:</strong><br>
                             +260 965 937 663
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" role="presentation">
-                                <path d="M4 5.75A1.75 1.75 0 0 1 5.75 4h12.5A1.75 1.75 0 0 1 20 5.75v12.5A1.75 1.75 0 0 1 18.25 20H5.75A1.75 1.75 0 0 1 4 18.25Zm2-.25a.5.5 0 0 0-.5.5v.26l6 4.13 6-4.14V6a.5.5 0 0 0-.5-.5Z" fill="currentColor"/>
-                            </svg>
-                        </span>
+                        <span class="contact-icon">✉️</span>
                         <div>
-                            <strong>Email</strong><br>
+                            <strong>Email:</strong><br>
                             craneprinters02@gmail.com
                         </div>
                     </div>
@@ -350,27 +289,23 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <div class="section-header">
-                <p class="eyebrow">Let's start your brief</p>
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Share your project details and we'll respond with timelines, pricing, and print-ready guidance.</p>
-            </div>
+            <h2 class="section-title">Get In Touch</h2>
             <form class="contact-form" onsubmit="handleSubmit(event)">
                 <div class="form-group">
                     <label>Full Name *</label>
-                    <input type="text" name="fullName" required placeholder="Enter your name">
+                    <input type="text" required placeholder="Enter your name">
                 </div>
                 <div class="form-group">
                     <label>Email *</label>
-                    <input type="email" name="email" required placeholder="Enter your email">
+                    <input type="email" required placeholder="Enter your email">
                 </div>
                 <div class="form-group">
                     <label>Phone Number *</label>
-                    <input type="tel" name="phone" required placeholder="Enter your phone">
+                    <input type="tel" required placeholder="Enter your phone">
                 </div>
                 <div class="form-group">
                     <label>Service Required *</label>
-                    <select name="service" required>
+                    <select required>
                         <option value="">Select a service</option>
                         <option>Custom Embroidery</option>
                         <option>Corporate Branding</option>
@@ -381,7 +316,7 @@
                 </div>
                 <div class="form-group">
                     <label>Message *</label>
-                    <textarea name="message" required placeholder="Tell us about your project"></textarea>
+                    <textarea required placeholder="Tell us about your project"></textarea>
                 </div>
                 <button type="submit" class="submit-button">Send Message</button>
             </form>
@@ -392,8 +327,8 @@
     <!-- Login Modal -->
     <div class="modal" id="loginModal">
         <div class="modal-content">
-            <button class="close-modal" aria-label="Close modal" onclick="closeModal()">&times;</button>
-            <h2 class="modal-title">Login</h2>
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Login</h2>
             <form onsubmit="handleLogin(event)">
                 <div class="form-group">
                     <label>Email</label>
@@ -426,12 +361,7 @@
 
     <script>
         function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            const button = document.querySelector('.mobile-menu');
-            const isOpen = navLinks.classList.toggle('active');
-            if (button) {
-                button.setAttribute('aria-expanded', isOpen);
-            }
+            document.getElementById('navLinks').classList.toggle('active');
         }
 
         function openModal() {
@@ -444,33 +374,8 @@
 
         function handleSubmit(event) {
             event.preventDefault();
-            const form = event.target;
-            const name = form.fullName?.value?.trim() || 'Customer';
-            const email = form.email?.value?.trim() || '';
-            const phone = form.phone?.value?.trim() || '';
-            const service = form.service?.value || 'General enquiry';
-            const details = form.message?.value?.trim() || '';
-
-            const intro = `Hi Crane Printers team, I'd like a quotation for ${service}.`;
-            const bodyLines = [
-                `Name: ${name}`,
-                email ? `Email: ${email}` : null,
-                phone ? `Phone: ${phone}` : null,
-                details ? `Project details: ${details}` : null
-            ].filter(Boolean);
-            const outro = 'Please let me know the next steps.';
-
-            const message = `${intro}\n\n${bodyLines.join('\n')}\n\n${outro}\n\nThanks,\n${name}`;
-            const encoded = encodeURIComponent(message);
-            const url = `https://wa.me/260965937663?text=${encoded}`;
-
-            // Open in new tab, fallback to same tab if blocked
-            const newWindow = window.open(url, '_blank');
-            if (!newWindow) {
-                window.location.href = url;
-            }
-
-            form.reset();
+            alert('Thank you for your message! We will get back to you soon.');
+            event.target.reset();
         }
 
         function handleLogin(event) {
@@ -494,22 +399,10 @@
                     const target = document.querySelector(href);
                     if (target) {
                         target.scrollIntoView({ behavior: 'smooth' });
-                        const navLinks = document.getElementById('navLinks');
-                        const button = document.querySelector('.mobile-menu');
-                        if (navLinks) navLinks.classList.remove('active');
-                        if (button) button.setAttribute('aria-expanded', 'false');
+                        document.getElementById('navLinks').classList.remove('active');
                     }
                 }
             });
-        });
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 960) {
-                const navLinks = document.getElementById('navLinks');
-                const button = document.querySelector('.mobile-menu');
-                if (navLinks) navLinks.classList.remove('active');
-                if (button) button.setAttribute('aria-expanded', 'false');
-            }
         });
 
         // Sliders (services + work)
@@ -520,7 +413,6 @@
             const next = sliderEl.querySelector('.slider-btn.next');
             const slides = track ? Array.from(track.children) : [];
             let index = 0;
-            let startX = null;
 
             function update() {
                 if (!track || !windowEl || !slides.length) return;
@@ -547,27 +439,6 @@
                 prev.addEventListener('click', () => move(-1));
                 next.addEventListener('click', () => move(1));
                 window.addEventListener('resize', update);
-
-                // Swipe support
-                function start(e) {
-                    startX = e.touches ? e.touches[0].clientX : e.clientX;
-                }
-
-                function end(e) {
-                    if (startX === null) return;
-                    const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
-                    const delta = endX - startX;
-                    if (Math.abs(delta) > 40) {
-                        move(delta < 0 ? 1 : -1);
-                    }
-                    startX = null;
-                }
-
-                windowEl.addEventListener('touchstart', start, { passive: true });
-                windowEl.addEventListener('touchend', end);
-                windowEl.addEventListener('mousedown', start);
-                windowEl.addEventListener('mouseup', end);
-                windowEl.addEventListener('mouseleave', end);
                 update();
             }
         }
@@ -583,6 +454,3 @@
     </script>
 </body>
 </html>
-
-
-
