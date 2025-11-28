@@ -11,10 +11,13 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="container">
+    <nav class="nav">
+        <div class="container nav__inner">
             <a href="#home" class="logo">Crane Printers</a>
-            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+            <button class="mobile-menu" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <span class="mobile-menu__icon"></span>
+                <span class="mobile-menu__label">Menu</span>
+            </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -30,7 +33,6 @@
         <div class="container">
             <h1>Premium Embroidery & Printing Services</h1>
             <p>Transforming your designs into beautiful reality with precision and care</p>
-            <a href="#contact" class="cta-button">Get a Quote</a>
         </div>
     </section>
 
@@ -183,7 +185,7 @@
                 <button class="slider-btn prev" aria-label="Previous slide">&#8249;</button>
                 <div class="slider-window">
                     <div class="slider-track">
-                        <article class="work-card" style="background-image: image-set(url('images/our services 1.webp') type('image/webp'), url('images/our services 1.jpg') type('image/jpeg'), url('images/our services 1.png') type('image/png'), url('images/our works 1.webp') type('image/webp'), url('images/our works 1.jpg') type('image/jpeg'), url('images/our works 1.png') type('image/png'));">
+                        <article class="work-card" style="background-image: image-set(url('images/our works 1.webp') type('image/webp'), url('images/our works 1.jpg') type('image/jpeg'), url('images/our works 1.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Branding</p>
@@ -191,7 +193,7 @@
                                 <p>Professional, consistent branding for teams.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: image-set(url('images/our services 2.webp') type('image/webp'), url('images/our services 2.jpg') type('image/jpeg'), url('images/our services 2.png') type('image/png'), url('images/our works 2.webp') type('image/webp'), url('images/our works 2.jpg') type('image/jpeg'), url('images/our works 2.png') type('image/png'));">
+                        <article class="work-card" style="background-image: image-set(url('images/our works 2.webp') type('image/webp'), url('images/our works 2.jpg') type('image/jpeg'), url('images/our works 2.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Headwear</p>
@@ -199,7 +201,7 @@
                                 <p>Sharp stitching and color-true logos.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: image-set(url('images/our services 3.webp') type('image/webp'), url('images/our services 3.jpg') type('image/jpeg'), url('images/our services 3.png') type('image/png'), url('images/our works 3.webp') type('image/webp'), url('images/our works 3.jpg') type('image/jpeg'), url('images/our works 3.png') type('image/png'));">
+                        <article class="work-card" style="background-image: image-set(url('images/our works 3.webp') type('image/webp'), url('images/our works 3.jpg') type('image/jpeg'), url('images/our works 3.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Bags</p>
@@ -207,7 +209,7 @@
                                 <p>Durable finishes for daily use.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: image-set(url('images/our services 4.webp') type('image/webp'), url('images/our services 4.jpg') type('image/jpeg'), url('images/our services 4.png') type('image/png'), url('images/our works 4.webp') type('image/webp'), url('images/our works 4.jpg') type('image/jpeg'), url('images/our works 4.png') type('image/png'));">
+                        <article class="work-card" style="background-image: image-set(url('images/our works 4.webp') type('image/webp'), url('images/our works 4.jpg') type('image/jpeg'), url('images/our works 4.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Events</p>
@@ -215,7 +217,7 @@
                                 <p>Eye-catching gear for launches and expos.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: image-set(url('images/our services 5.webp') type('image/webp'), url('images/our services 5.jpg') type('image/jpeg'), url('images/our services 5.png') type('image/png'), url('images/our works 5.webp') type('image/webp'), url('images/our works 5.jpg') type('image/jpeg'), url('images/our works 5.png') type('image/png'));">
+                        <article class="work-card" style="background-image: image-set(url('images/our works 5.webp') type('image/webp'), url('images/our works 5.jpg') type('image/jpeg'), url('images/our works 5.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Schools</p>
@@ -223,7 +225,7 @@
                                 <p>Precise embroidery that holds up to wear.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: image-set(url('images/our services 6.webp') type('image/webp'), url('images/our services 6.jpg') type('image/jpeg'), url('images/our services 6.png') type('image/png'), url('images/our works 6.webp') type('image/webp'), url('images/our works 6.jpg') type('image/jpeg'), url('images/our works 6.png') type('image/png'));">
+                        <article class="work-card" style="background-image: image-set(url('images/our works 6.webp') type('image/webp'), url('images/our works 6.jpg') type('image/jpeg'), url('images/our works 6.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Sports</p>
@@ -231,7 +233,7 @@
                                 <p>Performance-ready prints and stitching.</p>
                             </div>
                         </article>
-                        <article class="work-card" style="background-image: image-set(url('images/our services 7.webp') type('image/webp'), url('images/our services 7.jpg') type('image/jpeg'), url('images/our services 7.png') type('image/png'), url('images/our works 7.webp') type('image/webp'), url('images/our works 7.jpg') type('image/jpeg'), url('images/our works 7.png') type('image/png'));">
+                        <article class="work-card" style="background-image: image-set(url('images/our works 7.webp') type('image/webp'), url('images/our works 7.jpg') type('image/jpeg'), url('images/our works 7.png') type('image/png'));">
                             <div class="work-card__overlay"></div>
                             <div class="work-card__content">
                                 <p class="work-card__kicker">Print</p>
@@ -361,7 +363,12 @@
 
     <script>
         function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
+            const navLinks = document.getElementById('navLinks');
+            const button = document.querySelector('.mobile-menu');
+            const isOpen = navLinks.classList.toggle('active');
+            if (button) {
+                button.setAttribute('aria-expanded', isOpen);
+            }
         }
 
         function openModal() {
@@ -399,7 +406,10 @@
                     const target = document.querySelector(href);
                     if (target) {
                         target.scrollIntoView({ behavior: 'smooth' });
-                        document.getElementById('navLinks').classList.remove('active');
+                        const navLinks = document.getElementById('navLinks');
+                        const button = document.querySelector('.mobile-menu');
+                        if (navLinks) navLinks.classList.remove('active');
+                        if (button) button.setAttribute('aria-expanded', 'false');
                     }
                 }
             });
@@ -454,3 +464,6 @@
     </script>
 </body>
 </html>
+
+
+
