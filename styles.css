@@ -778,4 +778,50 @@ footer a {
     .work-card {
         min-width: 78vw;
     }
+
+    /* Center hero on mobile */
+    .hero__grid {
+        text-align: center;
+    }
+
+    .hero__actions {
+        justify-content: center;
+    }
+
+    .hero__chips {
+        justify-content: center;
+    }
+
+    .hero__media {
+        justify-items: center;
+    }
+
+    .hero__floating {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Center about on mobile */
+    .about-content {
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-pills {
+        justify-content: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-item {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 }
