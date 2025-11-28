@@ -423,6 +423,10 @@
             const next = sliderEl.querySelector('.slider-btn.next');
             const slides = track ? Array.from(track.children) : [];
             let index = 0;
+            let startX = null;
+            let isDragging = false;
+            let animationFrame = null;
+            let deltaX = 0;
 
             function update() {
                 if (!track || !windowEl || !slides.length) return;
@@ -449,6 +453,41 @@
                 prev.addEventListener('click', () => move(-1));
                 next.addEventListener('click', () => move(1));
                 window.addEventListener('resize', update);
+
+                const onStart = (clientX) => {
+                    startX = clientX;
+                    deltaX = 0;
+                    isDragging = true;
+                };
+
+                const onMove = (clientX) => {
+                    if (!isDragging || startX === null) return;
+                    deltaX = clientX - startX;
+                    if (!animationFrame) {
+                        animationFrame = requestAnimationFrame(() => {
+                            animationFrame = null;
+                        });
+                    }
+                };
+
+                const onEnd = () => {
+                    if (!isDragging || startX === null) return;
+                    if (Math.abs(deltaX) > 40) {
+                        move(deltaX < 0 ? 1 : -1);
+                    }
+                    startX = null;
+                    deltaX = 0;
+                    isDragging = false;
+                };
+
+                windowEl.addEventListener('touchstart', (e) => onStart(e.touches[0].clientX), { passive: true });
+                windowEl.addEventListener('touchmove', (e) => onMove(e.touches[0].clientX), { passive: true });
+                windowEl.addEventListener('touchend', onEnd);
+                windowEl.addEventListener('mousedown', (e) => onStart(e.clientX));
+                windowEl.addEventListener('mousemove', (e) => onMove(e.clientX));
+                windowEl.addEventListener('mouseup', onEnd);
+                windowEl.addEventListener('mouseleave', onEnd);
+
                 update();
             }
         }
